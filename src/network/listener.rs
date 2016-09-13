@@ -57,7 +57,7 @@ pub trait Listener {
             let mut sock = sock;
             loop {
                 // sleep just before receiving to give socket access to threads trying to send
-                thread::sleep(Duration::from_millis(1))
+                thread::sleep(Duration::from_millis(1));
                 
                 // Receive new message
                 match sock.receive_message() {
