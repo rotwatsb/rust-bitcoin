@@ -26,6 +26,7 @@ use network::serialize::{self, SimpleEncoder, SimpleDecoder};
 use network::encodable::{ConsensusDecodable, ConsensusEncodable};
 
 /// A message which can be sent on the Bitcoin network
+#[derive(Hash)]
 pub struct Address {
     /// Services provided by the peer whose address this is
     pub services: u64,
